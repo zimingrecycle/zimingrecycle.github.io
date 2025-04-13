@@ -346,16 +346,15 @@ html(lang='en')
 
                             .form-group
 
-                                // Email address input
+                                // 输入微信号
                                 input#email.form-control(
-                                    type='email',
-                                    placeholder='微信 *',
-                                    data-sb-validations='required,email'
+                                    type='text', 
+                                    placeholder='微信号 *',
+                                    data-sb-validations='required' 
                                 )
                                 .invalid-feedback(data-sb-feedback='email:required')
-                                    | An email is required.
-                                .invalid-feedback(data-sb-feedback='email:email')
-                                    | Email is not valid.
+                                    | 微信号是必填项。
+
 
                             .form-group.mb-md-0
 
