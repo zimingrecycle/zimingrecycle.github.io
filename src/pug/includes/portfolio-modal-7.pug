@@ -1,0 +1,31 @@
+// Portfolio item 7 modal popup - 花线
+#portfolioModal7.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-bs-dismiss='modal')
+                img(src='assets/img/close-icon.svg', alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // 项目详情
+                            h2.text-uppercase 花线
+                            p.item-intro.text-muted 混合铜线 · 回收量大，再加工价值高
+                            img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/7.jpg', alt='花线实物图')
+
+                            p
+                                | 花线是指带有皮线、编织层、塑料包裹或杂质较多的混合铜线，常见于家用电器、电机、电线电缆拆解等领域。虽然铜含量略低，但通过分选与脱皮处理仍具备较高的回收利用价值。
+                            ul.list-inline
+                                li
+                                    strong 特点：
+                                    | 铜线中夹带塑料、胶皮、纤维网等，需分类处理
+                                li
+                                    strong 来源：
+                                    | 废旧电器、电缆线束、二手设备拆解、电机等
+                                li
+                                    strong 用途：
+                                    | 分选提铜、熔炼再生、铜制工业原料等
+
+                            button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal', type='button')
+                                i.fas.fa-xmark.me-1
+                                | 关闭窗口

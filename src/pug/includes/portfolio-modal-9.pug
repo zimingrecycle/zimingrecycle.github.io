@@ -1,0 +1,31 @@
+// Portfolio item 9 modal popup - 汽车轮毂
+#portfolioModal9.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-bs-dismiss='modal')
+                img(src='assets/img/close-icon.svg', alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // 项目详情
+                            h2.text-uppercase 汽车轮毂
+                            p.item-intro.text-muted 铝合金结构件 · 重量足、纯度高、再生率高
+                            img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/9.jpg', alt='汽车轮毂实物图')
+
+                            p
+                                | 汽车轮毂多采用铝合金材料制成，具有较高的金属纯度与再生价值。其结构完整、材质单一、成分稳定，是铝回收市场中非常受欢迎的高质量回收品种，适用于合金再生、压铸和铝锭生产等。
+                            ul.list-inline
+                                li
+                                    strong 特点：
+                                    | 单一材质、重量足、含铝量高
+                                li
+                                    strong 来源：
+                                    | 报废汽车拆解、二手汽车维修厂、轮胎更换点等
+                                li
+                                    strong 用途：
+                                    | 再熔炼成铝锭、压铸件、工业铝材、合金零部件等
+
+                            button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal', type='button')
+                                i.fas.fa-xmark.me-1
+                                | 关闭窗口

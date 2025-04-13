@@ -1,0 +1,31 @@
+// Portfolio item 8 modal popup - 铝锭
+#portfolioModal8.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .close-modal(data-bs-dismiss='modal')
+                img(src='assets/img/close-icon.svg', alt='Close modal')
+            .container
+                .row.justify-content-center
+                    .col-lg-8
+                        .modal-body
+                            // 项目详情
+                            h2.text-uppercase 铝锭
+                            p.item-intro.text-muted 铝资源再生产物 · 工业制造核心原料
+                            img.img-fluid.d-block.mx-auto(src='assets/img/portfolio/8.jpg', alt='铝锭实物图')
+
+                            p
+                                | 铝锭是通过废铝回炉重熔后铸造成型的标准块状金属，是再生铝行业的主要产品之一。其具有成分纯度高、体积密度适中、便于运输和再加工等优点，广泛应用于铝型材、铸造件、汽车工业等领域。
+                            ul.list-inline
+                                li
+                                    strong 特点：
+                                    | 成分稳定、易储运、用途广、通用性强
+                                li
+                                    strong 来源：
+                                    | 废铝回收重熔铸造、合金压块加工厂等
+                                li
+                                    strong 用途：
+                                    | 用于铝制品加工、机械制造、建筑型材、电力设备等领域
+
+                            button.btn.btn-primary.btn-xl.text-uppercase(data-bs-dismiss='modal', type='button')
+                                i.fas.fa-xmark.me-1
+                                | 关闭窗口
