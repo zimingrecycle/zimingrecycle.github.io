@@ -36,9 +36,24 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
+        <!-- Masthead Section（保留原文，加轮播背景）-->
+        <header class="masthead position-relative">
+            <!-- 背景轮播-->
+            <div class="carousel slide carousel-fade position-absolute w-100 h-100 top-0 start-0" id="videoCarousel" data-bs-ride="carousel" data-bs-interval="6000">
+                <div class="carousel-inner w-100 h-100">
+                    <!-- 图片封面-->
+                    <div class="carousel-item active"><img class="d-block w-100 h-100" src="assets/carousel/cover.jpg" alt="封面图" style="object-fit: cover" /></div>
+                    <!-- 视频-->
+                    <div class="carousel-item">
+                        <video class="d-block w-100 h-100" autoplay muted loop playsinline style="object-fit: cover">
+                            <source src="assets/carousel/factory.mp4" type="video/mp4" />
+                            您的浏览器不支持视频播放
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <!-- 内容部分（放前面，确保在上层）-->
+            <div class="container position-relative z-1 text-white">
                 <div class="masthead-subheading">欢迎进入!</div>
                 <div class="masthead-heading text-uppercase">自明源再生资源回收有限公司</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">了解更多</a>
