@@ -36,27 +36,35 @@
                 </div>
             </div>
         </nav>
-        <!-- Masthead Section（保留原文，加轮播背景）-->
-        <header class="masthead position-relative">
-            <!-- 背景轮播-->
-            <div class="carousel slide carousel-fade position-absolute w-100 h-100 top-0 start-0" id="videoCarousel" data-bs-ride="carousel" data-bs-interval="6000">
-                <div class="carousel-inner w-100 h-100">
-                    <!-- 图片封面-->
-                    <div class="carousel-item active"><img class="d-block w-100 h-100" src="assets/carousel/cover.jpg" alt="封面图" style="object-fit: cover" /></div>
-                    <!-- 视频-->
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1: 图片 + 文字内容-->
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/img/header-bg.jpg" alt="图片轮播" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="container position-relative z-1 text-white">
+                                <div class="masthead-subheading">欢迎进入!</div>
+                                <div class="masthead-heading text-uppercase">自明源再生资源回收有限公司</div>
+                                <a class="btn btn-primary btn-xl text-uppercase" href="#services">了解更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2: 视频-->
                     <div class="carousel-item">
-                        <video class="d-block w-100 h-100" autoplay muted loop playsinline style="object-fit: cover">
-                            <source src="assets/carousel/factory.mp4" type="video/mp4" />
-                            您的浏览器不支持视频播放
-                        </video>
+                        <video class="d-block w-100" id="heroVideo" autoplay muted loop playsinline><source src="assets/video/hero.mp4" type="video/mp4" /></video>
                     </div>
                 </div>
-            </div>
-            <!-- 内容部分（放前面，确保在上层）-->
-            <div class="container position-relative z-1 text-white">
-                <div class="masthead-subheading">欢迎进入!</div>
-                <div class="masthead-heading text-uppercase">自明源再生资源回收有限公司</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">了解更多</a>
+                <!-- 左右切换按钮-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">上一张</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">下一张</span>
+                </button>
             </div>
         </header>
         <!-- Services-->

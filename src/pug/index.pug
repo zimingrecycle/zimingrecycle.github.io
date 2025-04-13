@@ -45,26 +45,31 @@ html(lang='en')
                             a.nav-link(href='#team') 信息公开
                         li.nav-item
                             a.nav-link(href='#contact') 联系我们
-        // Masthead Section（保留原文，加轮播背景）
-        header.masthead.position-relative
-            // 背景轮播
-            #videoCarousel.carousel.slide.carousel-fade.position-absolute.w-100.h-100.top-0.start-0(data-bs-ride='carousel', data-bs-interval='6000')
-                .carousel-inner.w-100.h-100
-                    // 图片封面
+        // Masthead
+        header.masthead
+            #carouselExampleIndicators.carousel.slide(data-bs-ride='carousel')
+                .carousel-inner
+                    // Slide 1: 图片 + 文字内容
                     .carousel-item.active
-                        img.d-block.w-100.h-100(src='assets/carousel/cover.jpg', alt='封面图', style='object-fit: cover;')
+                        img(src='assets/img/header-bg.jpg', class='d-block w-100', alt='图片轮播')
+                        .carousel-caption.d-none.d-md-block
+                            .container.position-relative.z-1.text-white
+                                .masthead-subheading 欢迎进入!
+                                .masthead-heading.text-uppercase 自明源再生资源回收有限公司
+                                a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 了解更多
 
-                    // 视频
+                    // Slide 2: 视频
                     .carousel-item
-                        video.d-block.w-100.h-100(autoplay, muted, loop, playsinline, style='object-fit: cover;')
-                            source(src='assets/carousel/factory.mp4', type='video/mp4')
-                            | 您的浏览器不支持视频播放
+                        video#heroVideo.d-block.w-100(autoplay, muted, loop, playsinline)
+                            source(src='assets/video/hero.mp4', type='video/mp4')
 
-            // 内容部分（放前面，确保在上层）
-            .container.position-relative.z-1.text-white
-                .masthead-subheading 欢迎进入!
-                .masthead-heading.text-uppercase 自明源再生资源回收有限公司
-                a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 了解更多
+                // 左右切换按钮
+                button.carousel-control-prev(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.visually-hidden 上一张
+                button.carousel-control-next(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.visually-hidden 下一张
 
         // Services
         section#services.page-section
