@@ -60,14 +60,14 @@ html(lang='en')
 
                     // Slide 2: 视频
                     .carousel-item
-                        video#heroVideo.d-block.w-100(autoplay, muted, loop, playsinline)
+                        video#heroVideo.d-block.w-100(playsinline, loop, controls)
                             source(src='assets/video/factory.mp4', type='video/mp4')
 
                 // 左右切换按钮
-                button.carousel-control-prev(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='prev')
+                button.carousel-control-prev(type='button', data-bs-target='#videoCarousel', data-bs-slide='prev')
                     span.carousel-control-prev-icon(aria-hidden='true')
                     span.visually-hidden 上一张
-                button.carousel-control-next(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='next')
+                button.carousel-control-next(type='button', data-bs-target='#videoCarousel', data-bs-slide='next')
                     span.carousel-control-next-icon(aria-hidden='true')
                     span.visually-hidden 下一张
 

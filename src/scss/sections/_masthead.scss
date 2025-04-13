@@ -44,6 +44,11 @@ header.masthead {
             line-height: 3.25rem;
             margin-bottom: 2rem;
             font-family: $headings-font-family;
+
+            // ✅ 防止换行 + 超出隐藏
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
@@ -53,7 +58,26 @@ header.masthead {
     }
 }
 
-// 响应式字体调整
+// ✅ 响应式字体调整，仅针对 masthead-heading
+@media (max-width: 992px) {
+    header.masthead .masthead-heading {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header.masthead .masthead-heading {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header.masthead .masthead-heading {
+        font-size: 1.5rem;
+    }
+}
+
+// 原有的 breakpoint 加强版
 @include media-breakpoint-up(md) {
     header.masthead {
         .masthead-subheading {

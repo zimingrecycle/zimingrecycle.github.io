@@ -10982,11 +10982,29 @@ header.masthead .carousel-caption .masthead-heading {
   line-height: 3.25rem;
   margin-bottom: 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 header.masthead video {
   cursor: pointer;
 }
 
+@media (max-width: 992px) {
+  header.masthead .masthead-heading {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  header.masthead .masthead-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  header.masthead .masthead-heading {
+    font-size: 1.5rem;
+  }
+}
 @media (min-width: 768px) {
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
