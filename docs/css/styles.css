@@ -10948,15 +10948,19 @@ header.masthead {
   text-align: center;
   color: #fff;
   overflow: hidden;
-}
-header.masthead #videoCarousel {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 header.masthead .carousel-inner {
-  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 header.masthead .carousel-item {
-  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 header.masthead img,

@@ -5,21 +5,26 @@ header.masthead {
     color: $white;
     overflow: hidden;
 
-    // 🚀 轮播区域撑满 masthead 高度
-    #videoCarousel {
-        height: 100%;
-    }
+    display: flex;
+    flex-direction: column;
 
+    // 🚀 主区域撑满高度
     .carousel-inner {
-        height: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
 
+    // 🚀 每一页居中展示内容
     .carousel-item {
-        height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
     }
 
-    // 🚀 视频 & 图片通用处理
+    // 视频 & 图片通用处理
     img,
     video {
         width: 100%;
@@ -32,7 +37,7 @@ header.masthead {
     // 📱 手机端：视频完整显示
     @media (max-width: 768px) {
         .carousel-item {
-            padding: 0;
+            padding: 0; // 移除多余间距
         }
 
         img,

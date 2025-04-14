@@ -48,30 +48,30 @@ html(lang='en')
         
         // Masthead
         header.masthead
-            #videoCarousel.carousel.slide(data-bs-ride='carousel', data-bs-interval='3000')
-                .carousel-inner
-                    // Slide 1: 图片
-                    .carousel-item.active
-                        img(src='assets/img/header-bg.jpg', class='d-block w-100', alt='图片轮播')
-                        .carousel-caption.d-none.d-md-block
-                            .container.position-relative.z-1.text-white
-                                .masthead-subheading 欢迎进入!
-                                .masthead-heading.text-uppercase 灵武市自明源再生资源回收有限公司
-                                a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 了解更多
+        #videoCarousel.carousel.slide(data-bs-ride='carousel', data-bs-interval='3000')
+            .carousel-inner
+                // Slide 1: 图片 + 文字内容
+                .carousel-item.active
+                    img(src='assets/img/header-bg.jpg', class='d-block w-100', alt='图片轮播')
+                    .carousel-caption.d-none.d-md-block
+                        .container.position-relative.z-1.text-white
+                            .masthead-subheading 欢迎进入!
+                            .masthead-heading.text-uppercase 灵武市自明源再生资源回收有限公司
+                            a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 了解更多
 
-                    // Slide 2: 视频
-                    .carousel-item
-                        video#heroVideo.d-block.w-100(autoplay muted loop playsinline)
-                            source(src='assets/video/factory.mp4', type='video/mp4')
+                // Slide 2: 视频
+                .carousel-item
+                    video#heroVideo.d-block.w-100(autoplay muted loop playsinline)
+                        source(src='assets/video/factory.mp4', type='video/mp4')
 
-                // 轮播控制按钮 - 一定放在 #videoCarousel 下（不是 .carousel-inner）
-                button.carousel-control-prev(type='button', data-bs-target='#videoCarousel', data-bs-slide='prev')
-                    span.carousel-control-prev-icon(aria-hidden='true')
-                    span.visually-hidden 上一张
-                button.carousel-control-next(type='button', data-bs-target='#videoCarousel', data-bs-slide='next')
-                    span.carousel-control-next-icon(aria-hidden='true')
-                    span.visually-hidden 下一张
-
+            // 左右切换按钮
+            button.carousel-control-prev(type='button', data-bs-target='#videoCarousel', data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden 上一张
+            button.carousel-control-next(type='button', data-bs-target='#videoCarousel', data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden 下一张
+        
         // Services
         section#services.page-section
             .container
