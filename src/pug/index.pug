@@ -23,21 +23,6 @@ html(lang='en')
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
-        style.
-            header.masthead {
-                height: 100vh;
-                display: flex;
-                align-items: center;
-            }
-            header.masthead .carousel-item,
-            header.masthead .carousel-inner,
-            header.masthead img,
-            header.masthead video {
-                height: 100vh;
-                width: 100%;
-                object-fit: cover;
-            }
-
     body#page-top
 
         // Navigation
@@ -60,7 +45,6 @@ html(lang='en')
                             a.nav-link(href='#team') 信息公开
                         li.nav-item
                             a.nav-link(href='#contact') 联系我们
-
         // Masthead
         header.masthead
             #videoCarousel.carousel.slide(data-bs-ride='carousel', data-bs-interval='3000')
@@ -76,7 +60,7 @@ html(lang='en')
 
                     // Slide 2: 视频
                     .carousel-item
-                        video#heroVideo.d-block.w-100(autoplay muted loop playsinline preload='auto' style='object-fit:cover; height: 100vh; width: 100%;')
+                        video#heroVideo.d-block.w-100(autoplay, muted, loop, playsinline)
                             source(src='assets/video/factory.mp4', type='video/mp4')
 
                 // 左右切换按钮
@@ -88,7 +72,7 @@ html(lang='en')
                     span.visually-hidden 下一张
 
         // Services
-        section#services.page-section(style='margin-top: -10px;')
+        section#services.page-section
             .container
                 .text-center
                     h2.section-heading.text-uppercase 社会责任

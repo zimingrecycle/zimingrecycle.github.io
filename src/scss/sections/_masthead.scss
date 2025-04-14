@@ -1,40 +1,20 @@
-//
 // Masthead section styling with carousel background
 //
 
 header.masthead {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     text-align: center;
     color: $white;
-    overflow: hidden;
 
     .carousel-inner,
-    .carousel-item {
-        height: 100vh;
-    }
-
+    .carousel-item,
     img,
     video {
-        width: 100%;
         height: 100%;
+        width: 100%;
         object-fit: cover;
-    }
-
-    // 手机端处理：防止裁剪视频，完整展示
-    @media (max-width: 768px) {
-        .carousel-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        img,
-        video {
-            object-fit: contain;
-            height: auto;
-            max-height: 100vh;
-        }
     }
 
     #videoCarousel {
@@ -64,10 +44,10 @@ header.masthead {
             margin-bottom: 2rem;
             font-family: $headings-font-family;
 
-            // 如需防止换行可以恢复这些
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
+            // ✅ 防止换行 + 超出隐藏
+            //white-space: nowrap;
+            //overflow: hidden;
+            //text-overflow: ellipsis;
         }
     }
 
