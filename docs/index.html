@@ -37,6 +37,7 @@
             </div>
         </nav>
         <!-- Masthead-->
+        <!-- Masthead-->
         <header class="masthead">
             <div class="carousel slide" id="videoCarousel" data-bs-ride="carousel" data-bs-interval="3000">
                 <div class="carousel-inner">
@@ -53,10 +54,10 @@
                     </div>
                     <!-- Slide 2: 视频-->
                     <div class="carousel-item">
-                        <video class="d-block w-100" id="heroVideo" autoplay muted loop playsinline><source src="assets/video/factory.mp4" type="video/mp4" /></video>
+                        <video class="d-block w-100" id="heroVideo" autoplay muted loop playsinline preload="auto" style="object-fit: cover"><source src="assets/video/factory.mp4" type="video/mp4" /></video>
                     </div>
                 </div>
-                <!-- 左右切换按钮-->
+                <!-- 左右切换按钮（必须确保 id 与 data-bs-target 匹配）-->
                 <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">上一张</span>
