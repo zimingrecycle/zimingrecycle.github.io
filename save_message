@@ -1,0 +1,16 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $name = $_POST['name'] ?? '';
+    $wechat = $_POST['email'] ?? '';
+    $phone = $_POST['phone'] ?? '';
+    $message = $_POST['message'] ?? '';
+
+    $timestamp = date("Y-m-d H:i:s");
+    $log = "[$timestamp] 姓名: $name | 微信: $wechat | 电话: $phone | 留言: $message\n";
+
+    file_put_contents("data/messages.txt", $log, FILE_APPEND | LOCK_EX);
+    echo json_encode(["success" => true]);
+    exit;
+}
+
+echo json_encode(["success" => false, "error" => "Invalid request"]);
