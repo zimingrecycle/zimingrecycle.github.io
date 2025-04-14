@@ -10945,19 +10945,19 @@ p {
 header.masthead {
   position: relative;
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
   text-align: center;
   color: #fff;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 header.masthead .carousel-inner {
   flex-grow: 1;
   display: flex;
+  flex-direction: column;
 }
 header.masthead .carousel-item {
-  flex: 1 0 100%;
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10969,10 +10969,13 @@ header.masthead video {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
   background-color: #000;
+  display: block;
 }
 @media (max-width: 768px) {
+  header.masthead .carousel-item {
+    padding: 0;
+  }
   header.masthead img,
   header.masthead video {
     -o-object-fit: contain;
@@ -10981,8 +10984,8 @@ header.masthead video {
     max-height: 100dvh;
   }
 }
-header.masthead #videoCarousel {
-  z-index: 0;
+header.masthead video {
+  cursor: pointer;
 }
 header.masthead .carousel-caption {
   position: absolute;
@@ -11006,9 +11009,6 @@ header.masthead .carousel-caption .masthead-heading {
   line-height: 3.25rem;
   margin-bottom: 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-header.masthead video {
-  cursor: pointer;
 }
 
 @media (max-width: 992px) {
