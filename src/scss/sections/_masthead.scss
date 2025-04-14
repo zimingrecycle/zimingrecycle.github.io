@@ -45,10 +45,7 @@ header.masthead {
             margin-bottom: 2rem;
             font-family: $headings-font-family;
 
-            // ✅ 防止换行 + 超出隐藏
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            
         }
     }
 

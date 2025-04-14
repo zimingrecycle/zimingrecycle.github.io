@@ -10982,9 +10982,6 @@ header.masthead .carousel-caption .masthead-heading {
   line-height: 3.25rem;
   margin-bottom: 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 header.masthead video {
   cursor: pointer;
