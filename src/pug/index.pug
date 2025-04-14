@@ -62,6 +62,10 @@ html(lang='en')
                     .carousel-item
                         video#heroVideo.d-block.w-100(autoplay, muted, loop, playsinline)
                             source(src='assets/video/factory.mp4', type='video/mp4')
+                    // ✅ Slide 3: 荣誉图片页
+                    .carousel-item
+                        img(src='assets/img/honor.jpg', class='d-block w-100', alt='公司荣誉')
+
 
                 // 左右切换按钮
                 button.carousel-control-prev(type='button', data-bs-target='#videoCarousel', data-bs-slide='prev')
