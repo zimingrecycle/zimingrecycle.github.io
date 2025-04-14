@@ -45,20 +45,24 @@ html(lang='en')
                             a.nav-link(href='#team') 信息公开
                         li.nav-item
                             a.nav-link(href='#contact') 联系我们
-        
         // Masthead
         header.masthead
-        #videoCarousel.carousel.slide(data-bs-ride='carousel', data-bs-interval='3000')
-            .carousel-inner
-                // Slide 1: 图片 + 文字内容
-                .carousel-item.active
-                    img(src='assets/img/header-bg.jpg', class='d-block w-100', alt='图片轮播')
-                    .carousel-caption.d-none.d-md-block
-                        .container.position-relative.z-1.text-white
+            #mastheadCarousel.carousel.slide(data-bs-ride='carousel')
+                .carousel-inner
+                    .carousel-item.active
+                        img(src='assets/img/header-bg.jpg', alt='背景图片')
+                        .carousel-caption
                             .masthead-subheading 欢迎进入!
-                            .masthead-heading.text-uppercase 灵武市自明源再生资源回收有限公司
+                            .masthead-heading.text-uppercase 自明源再生资源回收有限公司
                             a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 了解更多
-
+                    .carousel-item
+                        video(autoplay loop muted playsinline)
+                            source(src='assets/video/company.mp4', type='video/mp4')
+                        .carousel-caption
+                            .masthead-subheading 欢迎进入!
+                            .masthead-heading.text-uppercase 自明源再生资源回收有限公司
+                            a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 了解更多
+        
                 // Slide 2: 视频
                 .carousel-item
                     video#heroVideo.d-block.w-100(autoplay muted loop playsinline)
