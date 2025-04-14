@@ -1,66 +1,40 @@
 header.masthead {
     position: relative;
-    min-height: 100dvh; // ✅ 兼容手机，避免 100vh 被地址栏压缩
+    height: 100vh;
+    overflow: hidden;
     text-align: center;
     color: $white;
-    overflow: hidden;
-
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    // 🚀 主区域撑满高度
-    .carousel-inner {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    // 🚀 每一页居中展示内容
-    .carousel-item {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-
-    // 视频 & 图片通用处理
-    img,
-    video {
+    .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        background-color: #000;
-        display: block;
-    }
+        z-index: 0;
+        overflow: hidden;
 
-    // 📱 手机端：视频完整显示
-    @media (max-width: 768px) {
-        img,
         video {
-            object-fit: cover;
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            display: block;
+            background-color: #000;
         }
-    
-        .carousel-item {
-            height: 100vh;
+
+        @media (max-width: 768px) {
+            video {
+                object-fit: contain;
+                background-color: #000;
+            }
         }
-    }
-    
-    
- 
-    // 🎥 播放样式 & 交互
-    video {
-        cursor: pointer;
     }
 
-    // 👇 顶部字幕内容（保持居中）
     .carousel-caption {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: relative;
         z-index: 2;
         color: $white;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -81,38 +55,22 @@ header.masthead {
             font-family: $headings-font-family;
         }
     }
-}
 
-// ✅ 字体响应式
-@media (max-width: 992px) {
-    header.masthead .masthead-heading {
-        font-size: 2.5rem;
-    }
-}
-@media (max-width: 768px) {
-    header.masthead .masthead-heading {
-        font-size: 2rem;
-    }
-}
-@media (max-width: 576px) {
-    header.masthead .masthead-heading {
-        font-size: 1.5rem;
-    }
-}
-
-// 💻 桌面端加大字体
-@include media-breakpoint-up(md) {
-    header.masthead {
-        .masthead-subheading {
-            font-size: 2.25rem;
-            line-height: 2.25rem;
-            margin-bottom: 2rem;
-        }
-
+    @media (max-width: 992px) {
         .masthead-heading {
-            font-size: 4.5rem;
-            line-height: 4.5rem;
-            margin-bottom: 4rem;
+            font-size: 2.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .masthead-heading {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .masthead-heading {
+            font-size: 1.5rem;
         }
     }
 }
