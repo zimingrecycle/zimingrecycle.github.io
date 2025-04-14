@@ -4,14 +4,19 @@
 
 header.masthead {
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     text-align: center;
     color: $white;
-    overflow: hidden;
 
-    .carousel-inner,
+    // 容器整体高度设置
+    .carousel-inner {
+        height: 100%;
+    }
+
     .carousel-item {
-        height: 100vh;
+        height: 100%;
+        position: relative; // 确保内部内容定位不受影响
     }
 
     img,
@@ -19,22 +24,7 @@ header.masthead {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-
-    // 手机端处理：防止裁剪视频，完整展示
-    @media (max-width: 768px) {
-        .carousel-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        img,
-        video {
-            object-fit: contain;
-            height: auto;
-            max-height: 100vh;
-        }
+        display: block;
     }
 
     #videoCarousel {
@@ -48,6 +38,7 @@ header.masthead {
         transform: translate(-50%, -50%);
         z-index: 2;
         color: $white;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 
         .masthead-subheading {
             font-size: 1.5rem;
@@ -63,21 +54,17 @@ header.masthead {
             line-height: 3.25rem;
             margin-bottom: 2rem;
             font-family: $headings-font-family;
-
-            // 如需防止换行可以恢复这些
-            // white-space: nowrap;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
         }
     }
 
-    // 视频样式单独处理
+    // 视频样式
     video {
         cursor: pointer;
+        background-color: #000;
     }
 }
 
-// ✅ 响应式字体调整，仅针对 masthead-heading
+// ✅ 响应式字体调整
 @media (max-width: 992px) {
     header.masthead .masthead-heading {
         font-size: 2.5rem;
@@ -96,7 +83,7 @@ header.masthead {
     }
 }
 
-// 原有的 breakpoint 加强版
+// ✅ 加强版 breakpoints：大屏字体优化
 @include media-breakpoint-up(md) {
     header.masthead {
         .masthead-subheading {
