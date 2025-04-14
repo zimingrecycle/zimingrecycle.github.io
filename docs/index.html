@@ -37,37 +37,35 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="carousel slide" id="videoCarousel" data-bs-ride="carousel" data-bs-interval="3000">
-                <div class="carousel-inner">
-                    <!-- Slide 1: 图片 + 文字内容-->
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="assets/img/header-bg.jpg" alt="图片轮播" />
-                        <div class="carousel-caption d-none d-md-block">
-                            <div class="container position-relative z-1 text-white">
-                                <div class="masthead-subheading">欢迎进入!</div>
-                                <div class="masthead-heading text-uppercase">灵武市自明源再生资源回收有限公司</div>
-                                <a class="btn btn-primary btn-xl text-uppercase" href="#services">了解更多</a>
-                            </div>
+        <header class="masthead"></header>
+        <div class="carousel slide" id="videoCarousel" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+                <!-- Slide 1: 图片 + 文字内容-->
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="assets/img/header-bg.jpg" alt="图片轮播" />
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container position-relative z-1 text-white">
+                            <div class="masthead-subheading">欢迎进入!</div>
+                            <div class="masthead-heading text-uppercase">灵武市自明源再生资源回收有限公司</div>
+                            <a class="btn btn-primary btn-xl text-uppercase" href="#services">了解更多</a>
                         </div>
                     </div>
-                    <!-- Slide 2: 视频-->
-                    <div class="carousel-item">
-                        <video class="d-block w-100" id="heroVideo" autoplay muted loop playsinline preload="auto" style="object-fit: cover"><source src="assets/video/factory.mp4" type="video/mp4" /></video>
-                    </div>
                 </div>
-                <!-- 左右切换按钮（必须确保 id 与 data-bs-target 匹配）-->
-                <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">上一张</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">下一张</span>
-                </button>
+                <!-- Slide 2: 视频-->
+                <div class="carousel-item">
+                    <video class="d-block w-100" id="heroVideo" autoplay muted loop playsinline><source src="assets/video/factory.mp4" type="video/mp4" /></video>
+                </div>
             </div>
-        </header>
+            <!-- 左右切换按钮-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">上一张</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">下一张</span>
+            </button>
+        </div>
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
