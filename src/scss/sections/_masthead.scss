@@ -1,58 +1,36 @@
+//
+// Masthead section styling with carousel background
+//
+
 header.masthead {
     position: relative;
-    min-height: 100dvh; // ✅ 兼容手机，避免 100vh 被地址栏压缩
+    height: 100vh;
+    overflow: hidden;
     text-align: center;
     color: $white;
-    overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
-
-    // 🚀 主区域撑满高度
+    // 容器整体高度设置
     .carousel-inner {
         height: 100%;
-        flex-direction: column;
     }
 
-    // 🚀 每一页居中展示内容
     .carousel-item {
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+        position: relative; // 确保内部内容定位不受影响
     }
 
-    // 视频 & 图片通用处理
     img,
     video {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        background-color: #000;
         display: block;
     }
 
-    // 📱 手机端：视频完整显示
-    @media (max-width: 768px) {
-        .carousel-item {
-            padding: 0; // 移除多余间距
-        }
-
-        img,
-        video {
-            object-fit: contain; // ✅ 不裁剪
-            height: auto;
-            max-height: 100dvh;
-        }
+    #videoCarousel {
+        z-index: 0;
     }
 
-    // 🎥 播放样式 & 交互
-    video {
-        cursor: pointer;
-    }
-
-    // 👇 顶部字幕内容（保持居中）
     .carousel-caption {
         position: absolute;
         top: 50%;
@@ -78,26 +56,34 @@ header.masthead {
             font-family: $headings-font-family;
         }
     }
+
+    // 视频样式
+    video {
+        cursor: pointer;
+        background-color: #000;
+    }
 }
 
-// ✅ 字体响应式
+// ✅ 响应式字体调整
 @media (max-width: 992px) {
     header.masthead .masthead-heading {
         font-size: 2.5rem;
     }
 }
+
 @media (max-width: 768px) {
     header.masthead .masthead-heading {
         font-size: 2rem;
     }
 }
+
 @media (max-width: 576px) {
     header.masthead .masthead-heading {
         font-size: 1.5rem;
     }
 }
 
-// 💻 桌面端加大字体
+// ✅ 加强版 breakpoints：大屏字体优化
 @include media-breakpoint-up(md) {
     header.masthead {
         .masthead-subheading {
