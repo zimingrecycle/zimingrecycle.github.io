@@ -8,9 +8,10 @@ header.masthead {
     overflow: hidden;
     text-align: center;
     color: $white;
-    
+
     @media (max-width: 768px) {
-        padding-top: 100px; // 手机上导航栏更高，预留更多
+        padding-top: 100px;
+     } // 手机上导航栏更高，预留更多
 
     .carousel-inner,
     .carousel-item,
