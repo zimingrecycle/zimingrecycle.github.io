@@ -10944,40 +10944,54 @@ p {
 }
 header.masthead {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100dvh;
   text-align: center;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header.masthead .video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
-header.masthead .video-background video {
+header.masthead .carousel-inner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+header.masthead .carousel-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header.masthead img,
+header.masthead video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
   background-color: #000;
+  display: block;
 }
 @media (max-width: 768px) {
-  header.masthead .video-background video {
+  header.masthead .carousel-item {
+    padding: 0;
+  }
+  header.masthead img,
+  header.masthead video {
     -o-object-fit: contain;
        object-fit: contain;
-    background-color: #000;
+    height: auto;
+    max-height: 100dvh;
   }
 }
+header.masthead video {
+  cursor: pointer;
+}
 header.masthead .carousel-caption {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
   color: #fff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
@@ -10996,6 +11010,7 @@ header.masthead .carousel-caption .masthead-heading {
   margin-bottom: 2rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
 @media (max-width: 992px) {
   header.masthead .masthead-heading {
     font-size: 2.5rem;
@@ -11011,7 +11026,18 @@ header.masthead .carousel-caption .masthead-heading {
     font-size: 1.5rem;
   }
 }
-
+@media (min-width: 768px) {
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
 #portfolio .portfolio-item {
   max-width: 26rem;
   margin-left: auto;

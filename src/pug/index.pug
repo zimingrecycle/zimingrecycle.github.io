@@ -1,73 +1,77 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    meta(name='description', content='')
-    meta(name='author', content='')
 
-    title Agency - Start Bootstrap Theme
+    head
 
-    // Favicon
-    link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
 
-    // Font Awesome icons (free version)
-    script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
+        title Agency - Start Bootstrap Theme
 
-    // Google fonts
-    link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
-    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
-    // Core theme CSS (includes Bootstrap)
-    link(href='css/styles.css', rel='stylesheet')
+        // Font Awesome icons (free version)
+        script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
 
-  body#page-top
-    // Navigation
-    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
-      .container
-        a.navbar-brand(href='#page-top')
-          img(src='assets/img/navbar-logo.svg', alt='...', style='height: 80px; width: auto')
-        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-          | 菜单
-          i.fas.fa-bars.ms-1
-        #navbarResponsive.collapse.navbar-collapse
-          ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
-            li.nav-item
-              a.nav-link(href='#services') 首页
-            li.nav-item
-              a.nav-link(href='#portfolio') 新闻公开
-            li.nav-item
-              a.nav-link(href='#about') 关于我们
-            li.nav-item
-              a.nav-link(href='#team') 信息公开
-            li.nav-item
-              a.nav-link(href='#contact') 联系我们
+        // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
 
-    // Masthead
-    header.masthead
-      #videoCarousel.carousel.slide(data-bs-ride='carousel', data-bs-interval='3000')
-        .carousel-inner
-          // Slide 1: 图片 + 文字内容
-          .carousel-item.active
-            img(src='assets/img/header-bg.jpg', class='d-block w-100', alt='图片轮播')
-            .carousel-caption.d-none.d-md-block
-              .container.position-relative.z-1.text-white
-                .masthead-subheading 欢迎进入!
-                .masthead-heading.text-uppercase 灵武市自明源再生资源回收有限公司
-                a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 了解更多
+        // Core theme CSS (includes Bootstrap)
+        link(href='css/styles.css', rel='stylesheet')
 
-          // Slide 2: 视频
-          .carousel-item
-            video#heroVideo.d-block.w-100(autoplay muted loop playsinline)
-              source(src='assets/video/factory.mp4', type='video/mp4')
+    body#page-top
 
-        // 左右切换按钮
-        button.carousel-control-prev(type='button', data-bs-target='#videoCarousel', data-bs-slide='prev')
-          span.carousel-control-prev-icon(aria-hidden='true')
-          span.visually-hidden 上一张
-        button.carousel-control-next(type='button', data-bs-target='#videoCarousel', data-bs-slide='next')
-          span.carousel-control-next-icon(aria-hidden='true')
-          span.visually-hidden 下一张
+        // Navigation
+        nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+            .container
+                a.navbar-brand(href='#page-top')
+                    img(src='assets/img/navbar-logo.svg', alt='...', style='height: 80px; width: auto')
+                button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    | 菜单
+                    i.fas.fa-bars.ms-1
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.text-uppercase.ms-auto.py-4.py-lg-0
+                        li.nav-item
+                            a.nav-link(href='#services') 首页
+                        li.nav-item
+                            a.nav-link(href='#portfolio') 新闻公开
+                        li.nav-item
+                            a.nav-link(href='#about') 关于我们
+                        li.nav-item
+                            a.nav-link(href='#team') 信息公开
+                        li.nav-item
+                            a.nav-link(href='#contact') 联系我们
+        
+        // Masthead
+        header.masthead
+        #videoCarousel.carousel.slide(data-bs-ride='carousel', data-bs-interval='3000')
+            .carousel-inner
+                // Slide 1: 图片 + 文字内容
+                .carousel-item.active
+                    img(src='assets/img/header-bg.jpg', class='d-block w-100', alt='图片轮播')
+                    .carousel-caption.d-none.d-md-block
+                        .container.position-relative.z-1.text-white
+                            .masthead-subheading 欢迎进入!
+                            .masthead-heading.text-uppercase 灵武市自明源再生资源回收有限公司
+                            a.btn.btn-primary.btn-xl.text-uppercase(href='#services') 了解更多
+
+                // Slide 2: 视频
+                .carousel-item
+                    video#heroVideo.d-block.w-100(autoplay muted loop playsinline)
+                        source(src='assets/video/factory.mp4', type='video/mp4')
+
+            // 左右切换按钮
+            button.carousel-control-prev(type='button', data-bs-target='#videoCarousel', data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden 上一张
+            button.carousel-control-next(type='button', data-bs-target='#videoCarousel', data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden 下一张
+        
         // Services
         section#services.page-section
             .container
