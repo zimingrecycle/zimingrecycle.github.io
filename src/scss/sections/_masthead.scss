@@ -46,9 +46,9 @@ header.masthead {
             font-family: $headings-font-family;
 
             // ✅ 防止换行 + 超出隐藏
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            //white-space: nowrap;
+            //overflow: hidden;
+            //text-overflow: ellipsis;
         }
     }
 
