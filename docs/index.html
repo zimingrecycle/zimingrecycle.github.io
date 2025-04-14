@@ -15,6 +15,21 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            header.masthead {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+            }
+            header.masthead .carousel-item,
+            header.masthead .carousel-inner,
+            header.masthead img,
+            header.masthead video {
+                height: 100vh;
+                width: 100%;
+                object-fit: cover;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -37,37 +52,38 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead"></header>
-        <div class="carousel slide" id="videoCarousel" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="carousel-inner">
-                <!-- Slide 1: 图片 + 文字内容-->
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="assets/img/header-bg.jpg" alt="图片轮播" />
-                    <div class="carousel-caption d-none d-md-block">
-                        <div class="container position-relative z-1 text-white">
-                            <div class="masthead-subheading">欢迎进入!</div>
-                            <div class="masthead-heading text-uppercase">灵武市自明源再生资源回收有限公司</div>
-                            <a class="btn btn-primary btn-xl text-uppercase" href="#services">了解更多</a>
+        <header class="masthead">
+            <div class="carousel slide" id="videoCarousel" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <!-- Slide 1: 图片 + 文字内容-->
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/img/header-bg.jpg" alt="图片轮播" />
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="container position-relative z-1 text-white">
+                                <div class="masthead-subheading">欢迎进入!</div>
+                                <div class="masthead-heading text-uppercase">灵武市自明源再生资源回收有限公司</div>
+                                <a class="btn btn-primary btn-xl text-uppercase" href="#services">了解更多</a>
+                            </div>
                         </div>
                     </div>
+                    <!-- Slide 2: 视频-->
+                    <div class="carousel-item">
+                        <video class="d-block w-100" id="heroVideo" autoplay muted loop playsinline preload="auto" style="object-fit: cover; height: 100vh; width: 100%"><source src="assets/video/factory.mp4" type="video/mp4" /></video>
+                    </div>
                 </div>
-                <!-- Slide 2: 视频-->
-                <div class="carousel-item">
-                    <video class="d-block w-100" id="heroVideo" autoplay muted loop playsinline><source src="assets/video/factory.mp4" type="video/mp4" /></video>
-                </div>
+                <!-- 左右切换按钮-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">上一张</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">下一张</span>
+                </button>
             </div>
-            <!-- 左右切换按钮-->
-            <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">上一张</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">下一张</span>
-            </button>
-        </div>
+        </header>
         <!-- Services-->
-        <section class="page-section" id="services">
+        <section class="page-section" id="services" style="margin-top: -10px">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">社会责任</h2>
