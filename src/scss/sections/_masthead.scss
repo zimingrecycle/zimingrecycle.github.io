@@ -12,6 +12,7 @@ header.masthead {
     .carousel-inner,
     .carousel-item {
         height: 100vh;
+        overflow: hidden
     }
 
     img,
@@ -24,9 +25,7 @@ header.masthead {
     // 手机端处理：防止裁剪视频，完整展示
     @media (max-width: 768px) {
         .carousel-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            object-fit: contain;
         }
 
         img,
