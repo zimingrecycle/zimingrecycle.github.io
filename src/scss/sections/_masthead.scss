@@ -38,16 +38,16 @@ header.masthead {
     @media (max-width: 768px) {
         img,
         video {
-            object-fit: cover; // 保证不跳脱轮播结构
+            object-fit: cover;
             width: 100%;
             height: 100%;
         }
     
         .carousel-item {
             height: 100vh;
-            padding: 0; // 移除多余间距
         }
     }
+    
     
  
     // 🎥 播放样式 & 交互
