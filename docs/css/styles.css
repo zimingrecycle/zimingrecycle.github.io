@@ -10944,16 +10944,23 @@ p {
 }
 header.masthead {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
   text-align: center;
   color: #fff;
+  overflow: hidden;
 }
 header.masthead .carousel-inner {
-  height: 100%;
+  flex-grow: 1;
+  display: flex;
 }
 header.masthead .carousel-item {
-  height: 100%;
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 header.masthead img,
@@ -10963,6 +10970,16 @@ header.masthead video {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  background-color: #000;
+}
+@media (max-width: 768px) {
+  header.masthead img,
+  header.masthead video {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: auto;
+    max-height: 100dvh;
+  }
 }
 header.masthead #videoCarousel {
   z-index: 0;
@@ -10992,7 +11009,6 @@ header.masthead .carousel-caption .masthead-heading {
 }
 header.masthead video {
   cursor: pointer;
-  background-color: #000;
 }
 
 @media (max-width: 992px) {

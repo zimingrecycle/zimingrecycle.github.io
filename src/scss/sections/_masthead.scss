@@ -1,22 +1,24 @@
-//
-// Masthead section styling with carousel background
-//
-
 header.masthead {
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100dvh; // ✅ 防止被地址栏影响，兼容 Android/iOS
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
     text-align: center;
     color: $white;
+    overflow: hidden;
 
-    // 容器整体高度设置
     .carousel-inner {
-        height: 100%;
+        flex-grow: 1;
+        display: flex;
     }
 
     .carousel-item {
-        height: 100%;
-        position: relative; // 确保内部内容定位不受影响
+        flex: 1 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
     }
 
     img,
@@ -25,6 +27,17 @@ header.masthead {
         height: 100%;
         object-fit: cover;
         display: block;
+        background-color: #000;
+    }
+
+    // 手机端处理：不裁剪图片和视频
+    @media (max-width: 768px) {
+        img,
+        video {
+            object-fit: contain;
+            height: auto;
+            max-height: 100dvh;
+        }
     }
 
     #videoCarousel {
@@ -57,14 +70,12 @@ header.masthead {
         }
     }
 
-    // 视频样式
     video {
         cursor: pointer;
-        background-color: #000;
     }
 }
 
-// ✅ 响应式字体调整
+// ✅ 字体响应式
 @media (max-width: 992px) {
     header.masthead .masthead-heading {
         font-size: 2.5rem;
@@ -83,7 +94,7 @@ header.masthead {
     }
 }
 
-// ✅ 加强版 breakpoints：大屏字体优化
+// ✅ 桌面端大字体
 @include media-breakpoint-up(md) {
     header.masthead {
         .masthead-subheading {
