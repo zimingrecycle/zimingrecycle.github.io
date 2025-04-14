@@ -50,7 +50,7 @@ html(lang='en')
         header.masthead
             #videoCarousel.carousel.slide(data-bs-ride='carousel', data-bs-interval='3000')
                 .carousel-inner
-                    // Slide 1: 图片 + 文字内容
+                    // Slide 1: 图片
                     .carousel-item.active
                         img(src='assets/img/header-bg.jpg', class='d-block w-100', alt='图片轮播')
                         .carousel-caption.d-none.d-md-block
@@ -64,14 +64,14 @@ html(lang='en')
                         video#heroVideo.d-block.w-100(autoplay muted loop playsinline)
                             source(src='assets/video/factory.mp4', type='video/mp4')
 
-                // 左右切换按钮
+                // 轮播控制按钮 - 一定放在 #videoCarousel 下（不是 .carousel-inner）
                 button.carousel-control-prev(type='button', data-bs-target='#videoCarousel', data-bs-slide='prev')
                     span.carousel-control-prev-icon(aria-hidden='true')
                     span.visually-hidden 上一张
                 button.carousel-control-next(type='button', data-bs-target='#videoCarousel', data-bs-slide='next')
                     span.carousel-control-next-icon(aria-hidden='true')
                     span.visually-hidden 下一张
-    
+
         // Services
         section#services.page-section
             .container
